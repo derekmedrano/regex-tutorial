@@ -39,6 +39,10 @@ Quantifiers determine the number of times a character/group should be matched. W
 
 ### OR Operator
 
+The OR operator `|` lets us look for alternative matches and specifically it enables to match both full (`#rrggbb`) and short (`#rgb`) hex formats.
+
+<i>Example</i>: `#([a-f0-9]{6}|[a-f0-9]{3})` matches both `#aabbcc` and `#123`.
+
 ### Character Classes
 
 ### Flags
