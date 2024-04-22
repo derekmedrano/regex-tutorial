@@ -33,7 +33,9 @@ In this hex regex the `^` declares the start of the string and the `$` is the en
 ### Quantifiers
 
 Quantifiers determine the number of times a character/group should be matched. With Hex values we use the
-` { } ' format to specificy the amount of characters. `{3}`
+` { } ` format to specificy the amount of characters. `{3}` and `{9}` specify that there must be 3 and 9 hex characters.
+
+<i>Example</i>: `#([a-f0-9]{7})` matches `#abcdefg` but <strong>not</strong> `#abcd`.
 
 ### OR Operator
 
