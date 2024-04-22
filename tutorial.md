@@ -68,8 +68,13 @@ We use parentheses to group and capture subexpressions. With hex regex we can gr
 <i>Example</i>: `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/` captures the full or short hex value!
 
 
-
 ### Bracket Expressions
+
+Bracket expressions are used in regex to declare character sets to match.
+This is where the `[a-f0-9]`, repeated above often, comes into play. This is how we can ensure
+that the values used are valid for hexadecimal use. 
+
+<i>Example</i>: `#[abcdef0-9]{6}` matches any full hex color value like `#123456`, `#aaaaaa`, `#ff0945`, etc.
 
 ### Greedy and Lazy Match
 
