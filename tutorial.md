@@ -49,11 +49,25 @@ The OR operator `|` lets us look for alternative matches and specifically it ena
 Character classes `[a-f0-9]` define a set of characters to match. With hex regex,
 we can use this class to cover all <strong>valid</strong> hexadecimal characters (a-f and 0-9).
 
-<i>Example</i>: `#[a-f0-9]{6}` matches any full hex color value such as `#abc000` or `#aa1234`
+<i>Example</i>: `#[a-f0-9]{6}` matches any full hex color value such as `#abc000` or `#aa1234`.
 
 ### Flags
 
+Flags are generally not needed for Hex Matching but some examples are `a` which is used for global
+matching or `i` which is used for case-insensitivive matching.
+
+<i>Possible Example</i>: `/#[a-f0-9]{6}/i` matches both `#dd1111` and `#DD1111.`
+Again, flags won't be super important for hex codes, as they are almost always written in lowercase form.
+
+
 ### Grouping and Capturing
+
+We use parentheses to group and capture subexpressions. With hex regex we can group the pattern for the short 
+<strong>and</strong> long hexadecimal formats.
+
+<i>Example</i>: `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/` captures the full or short hex value!
+
+
 
 ### Bracket Expressions
 
