@@ -87,6 +87,11 @@ Hexadecimal codes so we'll move on, but further explanation can we found with th
 
 ### Boundaries
 
+Boundary <i>metacharacters</i> like `\b` define word boundaries.
+
+Again, not relevent for Hex Matching. <br>
+More info, however, can be found [here](https://www.rexegg.com/regex-boundaries.html).
+
 ### Back-references
 
 ### Look-ahead and Look-behind
