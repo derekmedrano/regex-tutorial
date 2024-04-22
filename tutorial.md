@@ -67,7 +67,6 @@ We use parentheses to group and capture subexpressions. With hex regex we can gr
 
 <i>Example</i>: `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/` captures the full or short hex value!
 
-
 ### Bracket Expressions
 
 Bracket expressions are used in regex to declare character sets to match.
@@ -77,6 +76,14 @@ that the values used are valid for hexadecimal use.
 <i>Example</i>: `#[abcdef0-9]{6}` matches any full hex color value like `#123456`, `#aaaaaa`, `#ff0945`, etc.
 
 ### Greedy and Lazy Match
+
+Greedy quantifiers are used to match as much as possible. We add a `?` at the end to make it lazy. 
+
+These kinds of quanitifiers can be explained in much more depth, but they aren't really needed when dealing with <br>
+Hexadecimal codes so we'll move on, but further explanation can we found with these sources.
+
+[Mastering Quantifiers](https://www.rexegg.com/regex-quantifiers.html) <br>
+[What Do Greedy and Lazy mean in the context of regular expressions?](https://stackoverflow.com/questions/2301285/what-do-lazy-and-greedy-mean-in-the-context-of-regular-expressions)
 
 ### Boundaries
 
