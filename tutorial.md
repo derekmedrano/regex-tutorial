@@ -5,7 +5,8 @@ There are several ways to use it but today we will be going over one specific ap
 
 ## Summary
 
-The regex pattern `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/` lets us validate both long and short forms of hex values/codes. Below we will break down each component to better understand how it works!
+The regex pattern `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/` lets us validate both long and short forms of hex values/codes. Below we will break down each component to better understand how it works! 
+My goal here is readability and easy understanding.
 
 0## Table of Contents
 
@@ -35,7 +36,7 @@ In this hex regex the `^` declares the start of the string and the `$` is the en
 Quantifiers determine the number of times a character/group should be matched. With Hex values we use the
 ` { } ` format to specificy the amount of characters. `{3}` and `{9}` specify that there must be 3 and 9 hex characters.
 
-<i>Example</i>: `#([a-f0-9]{7})` matches `#abcdefg` but <strong>not</strong> `#abcd`.
+<i>Example</i>: `#([a-f0-9]{5})` matches `#abcde` but <strong>not</strong> `#abc`.
 
 ### OR Operator
 
@@ -44,6 +45,11 @@ The OR operator `|` lets us look for alternative matches and specifically it ena
 <i>Example</i>: `#([a-f0-9]{6}|[a-f0-9]{3})` matches both `#aabbcc` and `#123`.
 
 ### Character Classes
+
+Character classes `[a-f0-9]` define a set of characters to match. With hex regex,
+we can use this class to cover all <strong>valid</strong> hexadecimal characters (a-f and 0-9).
+
+<i>Example</i>: `#[a-f0-9]{6}` matches any full hex color value such as `#abc000` or `#aa1234`
 
 ### Flags
 
@@ -61,4 +67,4 @@ The OR operator `|` lets us look for alternative matches and specifically it ena
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+This regex tutorial was written by Derek Medrano. Additional work can be found on here: https://github.com/derekmedrano
