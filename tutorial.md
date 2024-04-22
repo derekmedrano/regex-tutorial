@@ -94,8 +94,19 @@ More info, however, can be found [here](https://www.rexegg.com/regex-boundaries.
 
 ### Back-references
 
+Back-references allows us to reference previously captured groups. We probably won't use this very much for
+Hexadecimal purposes unless we are very often repeating the same hex values.
+
+<i>Possible Example</i>:  `/^#?([a-f0-9]{3})\1?$/` matches repeating short hex color values.
+
 ### Look-ahead and Look-behind
+
+Look-ahead `(?=...)` and look-behind `(?<=...)` are used for even more validation but not very necessary in the context of Hex codes.
+
+More info found [here](https://www.rexegg.com/regex-lookarounds.html).
 
 ## Author
 
-This regex tutorial was written by Derek Medrano. Additional work can be found on here: https://github.com/derekmedrano
+This regex tutorial was written by Derek Medrano. Additional work can be found on here: https://github.com/derekmedrano.
+
+Special thanks to [RexEgg](https://www.rexegg.com/) for the information found above as well as links posted when extra context was needed.
